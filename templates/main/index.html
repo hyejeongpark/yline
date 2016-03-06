@@ -1,7 +1,11 @@
-<h1>yline</h1>
+{% extends "main/base.html" %}
+{% block title %}Yline{% endblock %}
+{% block content %}
 
-{% for item in items %}
-{{ item.snippet.thumnails.default.url }}
-<img src="{{ item.snippet.thumbnails.high.url }}">
-<p>{{ item.snippet.title }}</p>
+{% for i in video_items %}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/{{ i.id.videoId }}" frameborder="0" allowfullscreen></iframe>
+<img src="{{ i.snippet.thumbnails.high.url }}">
+<p>{{ i.snippet.title }}</p>
 {% endfor %}
+
+{% endblock %}
