@@ -1,0 +1,7 @@
+<h1>yline</h1>
+
+{% for item in items %}
+{{ item.snippet.thumnails.default.url }}
+<img src="{{ item.snippet.thumbnails.high.url }}">
+<p>{{ item.snippet.title }}</p>
+{% endfor %}
